@@ -1,0 +1,136 @@
+
+#|| Diseño de una API de un restaurante ||#
+
+[GET] https//api.restaurant.com/users
+accept: application/json
+
+Response: 
+    Status code: 200 (OK)
+    Content-Type: application/json
+    {
+        "users": [
+        {
+            "id": 1,
+            "name": "Joao Chávez",
+            "phone_numb": "6342233434",
+            "gender": "Male"
+        },
+        {
+            "id": 2,
+            "name": Danna Macias,
+            "phone_numb": "6342233435",
+            "gender": "Female"
+        }]
+    }
+
+[GET] https//api.restaurant.com/menu
+accept: application/json
+
+Response: 
+    Status code: 200 (OK)
+    Content-Type: application/json
+    {
+        "users": [
+        {
+            "id": 3,
+            "name": "Enchiladas",
+            "type": "Salsa roja",
+            "price": 80
+        },
+        {
+            "id": 4,
+            "name": "Torta",
+            "type": "Jamón",
+            "price": 45
+        }]
+    }
+
+[POST] https//api.restaurant.com/users
+Accept: application/json
+
+Body: 
+{
+    "name": "Hugo Calderón",
+    "phone_numb": "6342233436",
+    "gender": "Male"
+}
+
+Response:
+    Status code: 201 (Created)
+    Content-Type: application/json
+    {
+       "id": "5",
+        "name": "Hugo Calderón",
+        "phone_numb": "6342233436",
+        "gender": "Male"
+    }
+
+[POST] https//api.restaurant.com/menu
+Accept: application/json
+
+Body: 
+{
+    "name": "Tacos",
+    "type": "Al pastor",
+    "price": 60
+}
+
+Response:
+    Status code: 201 (Created)
+    Content-Type: application/json
+    {
+       "id": "6",
+        "name": "Tacos",
+        "type": "Al pastor",
+        "price": 60
+    }
+
+[PUT] https//api.restaurant.com/users/5
+Accept: application/json
+
+Body:
+{
+    "phone_numb": "6342233446"
+}
+
+Response:
+    Status code: 201 (Created)
+    Content-Type: application/json
+    {
+        "id": "5",
+        "name": "Hugo Calderón",
+        "phone_numb": "6342233446",
+        "gender": "Male"
+    }
+
+[PUT] https//api.restaurant.com/menu/6
+Accept: application/json
+
+Body:
+{
+    "price": 55
+}
+
+Response:
+    Status code: 201 (Created)
+    Content-Type: application/json
+    {
+        "id": "6",
+        "name": "Tacos",
+        "type": "Al pastor",
+        "price": 55
+    }
+
+[DELETE]: https//api.restaurant.com/users/1
+Accept: application/json
+
+Response:
+Status code: 200 (OK)
+Content-Type: application/json
+
+[DELETE]: https//api.restaurant.com/menu/4
+Accept: application/json
+
+Response:
+Status code: 200 (OK)
+Content-Type: application/json
